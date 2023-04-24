@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Extended results robot template using Robot Framework.
+Documentation    Extended reporter robot template using Robot Framework.
 
 Library    RPA.Robocorp.WorkItems
 
@@ -9,8 +9,10 @@ Variables    variables.py
 *** Keywords ***
 Count Input
     [Documentation]    Retrieve and print post-process item details.
+
     ${message} =    Get Work Item Variable    message
     Log    Item observation: ${message}
+
     RETURN    ${1}
 
 
