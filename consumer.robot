@@ -45,6 +45,7 @@ Process Input
     TRY
         ${processed_data} =    My Resource Keyword    ${data}
     EXCEPT    AS    ${error}
+        ${processed_data} =    Set Variable    ${None}
         Log    Bad data processing due to: ${error}    level=ERROR
         Release Input Work Item    FAILED    exception_type=APPLICATION
         ...    code=BAD_PROCESSING    message=${error}
