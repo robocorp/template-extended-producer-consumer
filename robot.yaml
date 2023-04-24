@@ -1,0 +1,37 @@
+# For more details on the format and content:
+# https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml
+
+tasks:
+  # Task names here are used when executing the bots, so renaming these is recommended.
+  Produce Output:
+    robotTaskName: Produce Output
+  Produce Output With Trace:
+    shell: python -m robot -d output -L TRACE --logtitle "Producer log" --task "Produce Output" producer.robot  # --report NONE
+  Consume Input:
+    robotTaskName: Consume Input
+  Consume Input With Trace:
+    shell: python -m robot -d output -L TRACE --logtitle "Consumer log" --task "Consume Input" consumer.robot  # --report NONE
+  Report Result:
+    robotTaskName: Report Result
+  Report Result With Trace:
+    shell: python -m robot -d output -L TRACE --logtitle "Reporter log" --task "Report Result" reporter.robot  # --report NONE
+
+condaConfigFile: conda.yaml
+
+environmentConfigs:
+  - environment_windows_amd64_freeze.yaml
+  - environment_linux_amd64_freeze.yaml
+  - environment_darwin_amd64_freeze.yaml
+  - conda.yaml
+
+artifactsDir: output
+
+PATH:
+  - .
+  - bin
+PYTHONPATH:
+  - resources
+  - libraries
+
+ignoreFiles:
+  - .gitignore

@@ -1,2 +1,1 @@
-# template-extended-producer-consumer
-Extended robot template for producer-consumer using Robot Framework
+# Extended producer-consumer Robot Framework template
