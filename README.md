@@ -44,8 +44,8 @@ it. (debugging purposes)
 3. The same applies for the 3rd (optional) task, where a report is generated with all
    the results obtained through the 2nd task.
 
-Please go through the robot code and read the `[Documentation]` and comment section for
-each of the tasks/keywords for understanding the details.
+Please go through the robot code and read the `[Documentation]` and comment sections
+for each of the tasks/keywords in order to understand the details.
 
 ## Learn more
 
