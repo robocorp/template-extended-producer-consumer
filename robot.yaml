@@ -24,10 +24,15 @@ environmentConfigs:
   - environment_darwin_amd64_freeze.yaml
   - conda.yaml
 
+preRunScripts:
+  # Example of running an executable script right before running the robot.
+  # Different languages and platforms are supported, read more under documentation:
+  #  https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-are-prerunscripts
+  - python-script.py devdata/file.txt
+
 artifactsDir: output
 
 PATH:
-  - .
   - bin
 PYTHONPATH:
   - resources
