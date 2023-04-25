@@ -29,8 +29,8 @@ Control Room.
 The robot Process functionality is split into 2 mandatory Steps and an optional 3rd one
 for reporting purposes (as tasks):
 1. [*producer.robot*](./producer.robot): `Produce Output`
-2. [*consumer.robot*](./producer.robot): `Consume Input`
-3. [*reporter.robot*](./producer.robot): `Report Result`
+2. [*consumer.robot*](./consumer.robot): `Consume Input`
+3. [*reporter.robot*](./reporter.robot): `Report Result`
 
 Every such task has its own `<Task Name> With Trace` flavor through which you can
 enable a fine grained control over the robot run and enable error tracing as well with
