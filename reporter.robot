@@ -10,10 +10,12 @@ Variables    variables.py
 Count Input
     [Documentation]    Retrieve and print post-process item details.
 
+    ${processed_data} =    Get Work Item Variable    processed_data
     ${message} =    Get Work Item Variable    message
+    Log    Item processed data: ${processed_data}
     Log    Item observation: ${message}
 
-    RETURN    ${1}
+    RETURN    ${1}  # the item was fully successfully processed
 
 
 *** Tasks ***

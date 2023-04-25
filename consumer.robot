@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Extended consumer robot template using Robot Framework.
 
+Library    MyLibrary
 Library    RPA.Robocorp.WorkItems
 
 Resource    keywords.robot
@@ -23,9 +24,10 @@ Validate Input
     RETURN    ${False}    Data "${data}" doesn't match with "<number>.*(${TODAY})"!
 
 Process Input
-    [Documentation]    Processes input data and releases a business failure for any
+    [Documentation]    Processes input data and releases a BUSINESS failure for any
     ...    invalid item. If reporting is enabled, a new output Work Item is created
-    ...    with its post-process info. (items failed to be processed will be retried)
+    ...    with its post-process info. (items failed to be processed due to APPLICATION
+    ...    errors can be retried in Control Room)
 
     # Retrieve and validate the input data given the current item in the queue.
     ${data} =    Get Work Item Variable    data
@@ -44,6 +46,7 @@ Process Input
     Log    Processing item data: ${data}...
     TRY
         ${processed_data} =    My Resource Keyword    ${data}
+        ${processed_data} =    My Library Keyword    ${processed_data}
     EXCEPT    AS    ${error}
         ${processed_data} =    Set Variable    ${None}
         Log    Bad data processing due to: ${error}    level=ERROR
