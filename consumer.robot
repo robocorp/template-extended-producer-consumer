@@ -27,7 +27,7 @@ Process Input
     ...    invalid item. If reporting is enabled, a new output Work Item is created
     ...    with its post-process info. (items failed to be processed will be retried)
 
-    # Retrieves and validates the input data given the current item in the queue.
+    # Retrieve and validate the input data given the current item in the queue.
     ${data} =    Get Work Item Variable    data
     ${status}    ${message} =    Validate Input    ${data}
 
