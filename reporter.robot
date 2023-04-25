@@ -27,6 +27,9 @@ Report Result
         Fail    Reporting is disabled!
     END
 
+    # NOTE: The reporter might work best when it waits for all the Work Items in the
+    #  previous Step to be finished, so it can collect all the inputs in a single run.
+    #  This "Sync step" feature is currently on the TODO list in Control Room.
     @{results} =    For Each Input Work Item    Count Input
     ${total} =    Evaluate    sum(${results})
     Log    Successfully processed items: ${total}
