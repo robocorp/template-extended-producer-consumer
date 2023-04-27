@@ -1,30 +1,31 @@
 # Extended Producer-Consumer Robot Framework template
 
 Robot Framework template implementing a Producer-Consumer model using custom libraries
-and resources. This combines two already existing templates, such as
-"Extended Robot Framework template" and "Producer-consumer model template" into one.
+and resources. This combines two already existing templates, such as the
+"Extended Robot Framework template" and "Producer-consumer model template", into one.
 
 It features the following:
-- Producer-Consumer model: one task produce work and another consumes it.
-- An optional additional Step which reports the Consumer results.
+- Producer-Consumer model: one task produces work and another consumes it.
+- An optional additional third Step which reports the Consumer results.
 - Item-level validation and error handling.
 - Extended robot structure comprising the following:
   - Custom Python libraries placed in the [*libraries*](./libraries/) directory.
   - Custom reusable RF resources and variables file placed in
     [*resources*](./resources/).
   - Optional (setup) scripts to be ran before the robot starts in [*bin*](./bin/).
-  - Locally mocked Work Items and environment JSON file to customize the run and
-    simulate the Control Room behavior in [*devdata*](./devdata/).
+    (**rcc** only)
+  - Locally mocked Work Items and environment variables JSON files, to customize the
+    run and simulate the Control Room behavior, in [*devdata*](./devdata/).
 
 ## Use-case
 
 This robot template is particularly useful for complex scenarios where you need to
-split bigger robots into maintainable files and structure the code, resources and any
-additional library or executable script accordingly.
+split bigger robots into smaller maintainable files and structure the code, resources
+and any additional library or executable script accordingly.
 
 Beside its extended modular structure, it provides the boilerplate to work with Work
-Items, while leveraging their parallelization support and retry mechanism right in
-Control Room.
+Items locally, while leveraging their parallelization support and retry mechanism right
+in Control Room.
 
 ## Tasks
 
@@ -63,7 +64,7 @@ for each of the tasks/keywords in order to understand the details.
 
 ### Robot examples
 
-- [Web Store Order Processor Using Work Items](https://robocorp.com/portal/robot/robocorp/example-web-store-work-items)
 - [Producer-Consumer Model Template](https://robocorp.com/portal/robot/robocorp/template-producer-consumer)
+- [Web Store Order Processor Using Work Items](https://robocorp.com/portal/robot/robocorp/example-web-store-work-items)
+- [Template for producer-consumer model robots using work items](https://robocorp.com/portal/robot/robocorp/example-producer-consumer-reporting)
 - [Order in bulk the total number of requested robot parts](https://robocorp.com/portal/robot/robocorp/example-orders-distribution)
-- [Template for producer-consumer model robots using work items](https://github.com/robocorp/example-producer-consumer-reporting)
