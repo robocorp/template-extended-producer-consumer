@@ -1,7 +1,9 @@
 *** Settings ***
-Documentation    Extended producer robot template using Robot Framework.
+Documentation    Robot Framework template implementing a Producer-Consumer model using
+...    custom libraries and resources. (Producer robot which produces output work)
 
 Library    MyLibrary
+Library    RPA.FileSystem
 Library    RPA.Robocorp.WorkItems
 
 Resource    keywords.robot
@@ -37,7 +39,10 @@ Produce Output
 
         Create Output Work Item
         Set Work Item Variable    data    ${index}. ${output_data}
-        Add Work Item File    ${FILE_PATH}
+        ${file_available} =    Does File Exist    ${WORKITEM_FILE_PATH}
+        IF    ${file_available}
+            Add Work Item File    ${WORKITEM_FILE_PATH}
+        END
         Save Work Item
     END
 

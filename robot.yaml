@@ -28,7 +28,7 @@ preRunScripts:
   # Example of running an executable script right before running the robot.
   # Different languages and platforms are supported, read more under documentation:
   #  https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-are-prerunscripts
-  - python-script.py devdata/file.txt
+  - generate-workitem-file.py output/random-workitem-file.txt
 
 artifactsDir: output
 

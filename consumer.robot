@@ -1,5 +1,6 @@
 *** Settings ***
-Documentation    Extended consumer robot template using Robot Framework.
+Documentation    Robot Framework template implementing a Producer-Consumer model using
+...    custom libraries and resources. (Consumer robot which consumes input work)
 
 Library    MyLibrary
 Library    RPA.Robocorp.WorkItems
@@ -55,7 +56,7 @@ Process Input
     END
 
     # Optionally create additional outputs for the report computed at Step 3.
-    IF    ${CREATE_REPORT}
+    IF    "%{CREATE_REPORT=}"
         &{variables} =    Create Dictionary
         ...    processed_data    ${processed_data}
         ...    message    ${message}

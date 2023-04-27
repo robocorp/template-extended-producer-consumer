@@ -2,7 +2,7 @@
 
 from robot.api import logger
 
-# Variables can be accessed from the resources/variables.py Python module.
+# Variables can be accessed from the resources/variables.py Python module here as well.
 from variables import TODAY
 
 

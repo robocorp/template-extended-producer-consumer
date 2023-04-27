@@ -1,5 +1,6 @@
 *** Settings ***
-Documentation    Extended reporter robot template using Robot Framework.
+Documentation    Robot Framework template implementing a Producer-Consumer model using
+...    custom libraries and resources. (Reporter robot which reports Consumer's results)
 
 Library    RPA.Robocorp.WorkItems
 
@@ -23,13 +24,13 @@ Report Result
     [Documentation]    Generate a report comprising all the details of the previously
     ...    processed items.
 
-    IF    not ${CREATE_REPORT}
+    IF    not "%{CREATE_REPORT=}"
         Fail    Reporting is disabled!
     END
 
     # NOTE: The reporter might work best when it waits for all the Work Items in the
     #  previous Step to be finished, so it can collect all the inputs in a single run.
-    #  This "Sync step" feature is currently on the TODO list in Control Room.
+    #  This "Step Sync" feature is currently on the TODO list in Control Room.
     @{results} =    For Each Input Work Item    Count Input
     ${total} =    Evaluate    sum(${results})
     Log    Successfully processed items: ${total}

@@ -1,6 +1,8 @@
-# Extended producer-consumer Robot Framework template
+# Extended Producer-Consumer Robot Framework template
 
-Extended Robot Framework first template combined with the Producer-Consumer model.
+Robot Framework template implementing a Producer-Consumer model using custom libraries
+and resources. This combines two already existing templates, such as
+"Extended Robot Framework template" and "Producer-consumer model template" into one.
 
 It features the following:
 - Producer-Consumer model: one task produce work and another consumes it.
@@ -43,6 +45,10 @@ it. (debugging purposes)
 2. The second task receives as input the output created by the previous (first) one.
 3. The same applies for the 3rd (optional) task, where a report is generated with all
    the results obtained through the 2nd task.
+
+Set `CREATE_REPORT` env var (in Control Room as well) if you decide to use the 3rd Step
+for reporting purposes. This is enabled by default locally in the
+[env.json](./devdata/env.json) file.
 
 Please go through the robot code and read the `[Documentation]` and comment sections
 for each of the tasks/keywords in order to understand the details.
