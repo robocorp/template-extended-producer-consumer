@@ -64,6 +64,7 @@ for each of the tasks/keywords in order to understand the details.
 
 ### Robot examples
 
+- [Extended Producer-Consumer Model Template](https://robocorp.com/portal/robot/robocorp/template-extended)
 - [Producer-Consumer Model Template](https://robocorp.com/portal/robot/robocorp/template-producer-consumer)
 - [Web Store Order Processor Using Work Items](https://robocorp.com/portal/robot/robocorp/example-web-store-work-items)
 - [Template for producer-consumer model robots using work items](https://robocorp.com/portal/robot/robocorp/example-producer-consumer-reporting)
