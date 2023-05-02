@@ -2,7 +2,8 @@
 
 Robot Framework template implementing a Producer-Consumer model using custom libraries
 and resources. This combines two already existing templates, such as the
-"Extended Robot Framework template" and "Producer-consumer model template", into one.
+**Extended Robot Framework template** and the **Producer-consumer model template**,
+into one.
 
 It features the following:
 - Producer-Consumer model: one task produces work and another consumes it.
@@ -12,8 +13,8 @@ It features the following:
   - Custom Python libraries placed in the [*libraries*](./libraries/) directory.
   - Custom reusable RF resources and variables file placed in
     [*resources*](./resources/).
-  - Optional (setup) scripts to be ran before the robot starts in [*bin*](./bin/).
-    (**rcc** only)
+  - Optional (setup) scripts, to be ran before the robot starts, in [*bin*](./bin/).
+    (**rcc** & Control Room only)
   - Locally mocked Work Items and environment variables JSON files, to customize the
     run and simulate the Control Room behavior, in [*devdata*](./devdata/).
 
@@ -39,6 +40,10 @@ Every such task has its own `<Task Name> With Trace` flavor through which you ca
 enable a fine grained control over the robot run and enable error tracing as well with
 it. (debugging purposes)
 
+> It is highly recommended to **rename and customize** all these tasks, including any
+> other file, resource or library, as the naming used here isn't suitable for
+> production. (it's just a template demo-ing the functionality)
+
 ### How to run
 
 1. The first task runs with the only available initial input Work Item:
@@ -49,10 +54,10 @@ it. (debugging purposes)
 
 Set `CREATE_REPORT` env var (in Control Room as well) if you decide to use the 3rd Step
 for reporting purposes. This is enabled by default locally in the
-[env.json](./devdata/env.json) file.
+[env.json](./devdata/env.json) file (and its other flavors when running with **rcc**).
 
 Please go through the robot code and read the `[Documentation]` and comment sections
-for each of the tasks/keywords in order to understand the details.
+for each of the tasks/keywords in order to understand how the bot works in detail.
 
 ## Learn more
 
@@ -67,5 +72,5 @@ for each of the tasks/keywords in order to understand the details.
 - [Extended Robot Framework Template](https://robocorp.com/portal/robot/robocorp/template-extended)
 - [Producer-Consumer Model Template](https://robocorp.com/portal/robot/robocorp/template-producer-consumer)
 - [Web Store Order Processor Using Work Items](https://robocorp.com/portal/robot/robocorp/example-web-store-work-items)
-- [Template for producer-consumer model robots using work items](https://robocorp.com/portal/robot/robocorp/example-producer-consumer-reporting)
+- [Reporting Producer-Consumer model with Excel and Browser](https://robocorp.com/portal/robot/robocorp/example-producer-consumer-reporting)
 - [Order in bulk the total number of requested robot parts](https://robocorp.com/portal/robot/robocorp/example-orders-distribution)

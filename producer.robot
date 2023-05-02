@@ -2,7 +2,7 @@
 Documentation    Robot Framework template implementing a Producer-Consumer model using
 ...    custom libraries and resources. (Producer robot which produces output work)
 
-Library    MyLibrary
+Library    DummyLibrary
 Library    RPA.FileSystem
 Library    RPA.Robocorp.WorkItems
 

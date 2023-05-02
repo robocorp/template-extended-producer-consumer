@@ -14,7 +14,7 @@ import time
 from pathlib import Path
 
 
-def main(argv, argc):
+def main(argc, argv):
     """Main entry point of the script which gets executed before the bot starts."""
     # Use `argparse` for better support towards CLI argument parsing:
     #  https://docs.python.org/3/library/argparse.html
@@ -34,5 +34,5 @@ def main(argv, argc):
 if __name__ == "__main__":
     # Call the main function with CLI arguments and exit with a return code. A non-zero
     #  value will interrupt the bot execution.
-    return_code = main(sys.argv, len(sys.argv))
-    sys.exit(int(return_code or 0))
+    return_code = main(len(sys.argv), sys.argv)  # called with CLI arguments
+    sys.exit(int(return_code or 0))  # exits with above return code
