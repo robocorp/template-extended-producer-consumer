@@ -6,15 +6,15 @@ tasks:
   Produce Output:
     robotTaskName: Produce Output
   Produce Output With Trace:
-    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Producer log" --task "Produce Output" producer.robot  # --report NONE
+    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Producer log" --task "Produce Output" producer.robot
   Consume Input:
     robotTaskName: Consume Input
   Consume Input With Trace:
-    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Consumer log" --task "Consume Input" consumer.robot  # --report NONE
+    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Consumer log" --task "Consume Input" consumer.robot
   Report Result:
     robotTaskName: Report Result
   Report Result With Trace:
-    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Reporter log" --task "Report Result" reporter.robot  # --report NONE
+    shell: python -m robot -d output -L TRACE --report NONE --logtitle "Reporter log" --task "Report Result" reporter.robot
 
 condaConfigFile: conda.yaml
 
