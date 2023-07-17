@@ -1,4 +1,4 @@
-# Extended Producer-Consumer Robot Framework template
+# Template: Robot Framework - Producer-Consumer Extended
 
 Robot Framework template implementing a Producer-Consumer model using custom libraries
 and resources. This combines two already existing templates, such as the
