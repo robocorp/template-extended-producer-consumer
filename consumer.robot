@@ -49,10 +49,9 @@ Process Input
         ${processed_data} =    My Resource Keyword    ${data}
         ${processed_data} =    My Library Keyword    ${processed_data}
     EXCEPT    AS    ${error}
-        ${processed_data} =    Set Variable    ${None}
         Log    Bad data processing due to: ${error}    level=ERROR
-        Release Input Work Item    FAILED    exception_type=APPLICATION
-        ...    code=BAD_PROCESSING    message=${error}
+        ${message} =    Set Variable    ${error}
+        ${processed_data} =    Set Variable    ${None}
     END
 
     # Optionally create additional outputs for the report computed at Step 3.
@@ -61,6 +60,13 @@ Process Input
         ...    processed_data    ${processed_data}
         ...    message    ${message}
         Create Output Work Item    variables=${variables}    save=${True}
+    END
+
+    # Release the app failures at the end so the optional output creation above can
+    #  take place.
+    IF    "${processed_data}" == "${None}"
+        Release Input Work Item    FAILED    exception_type=APPLICATION
+        ...    code=BAD_PROCESSING    message=${message}
     END
 
 
