@@ -63,14 +63,14 @@ for each of the tasks/keywords in order to understand how the bot works in detai
 
 ### Documentation
 
-1. [Work Items](https://robocorp.com/docs/development-guide/control-room/work-items)
-2. [Sharing robot code and libraries](https://robocorp.com/docs/development-guide/qa-and-best-practices/sharing-libraries)
-3. [How to write and use custom Robot Framework Python RPA libraries](https://robocorp.com/docs/development-guide/robot-framework/how-to-use-custom-python-libraries-in-your-robots#quick-recap-on-robot-framework-libraries-and-keywords)
+1. [Work Items](https://robocorp.com/docs-robot-framework/development-guide/control-room/work-items)
+2. [Sharing robot code and libraries](https://robocorp.com/docs-robot-framework/development-guide/qa-and-best-practices/sharing-libraries)
+3. [How to write and use custom Robot Framework Python RPA libraries](https://robocorp.com/docs-robot-framework/development-guide/robot-framework/how-to-use-custom-python-libraries-in-your-robots#quick-recap-on-robot-framework-libraries-and-keywords)
 
 ### Robot examples
 
-- [Extended Robot Framework Template](https://robocorp.com/portal/robot/robocorp/template-extended)
-- [Producer-Consumer Model Template](https://robocorp.com/portal/robot/robocorp/template-producer-consumer)
-- [Web Store Order Processor Using Work Items](https://robocorp.com/portal/robot/robocorp/example-web-store-work-items)
-- [Reporting Producer-Consumer model with Excel and Browser](https://robocorp.com/portal/robot/robocorp/example-producer-consumer-reporting)
-- [Order in bulk the total number of requested robot parts](https://robocorp.com/portal/robot/robocorp/example-orders-distribution)
+- [Extended Robot Framework Template](https://github.com/robocorp/template-extended)
+- [Producer-Consumer Model Template](https://github.com/robocorp/template-producer-consumer)
+- [Web Store Order Processor Using Work Items](https://github.com/robocorp/example-web-store-work-items/tree/rfw)
+- [Reporting Producer-Consumer model with Excel and Browser](https://github.com/robocorp/example-producer-consumer-reporting)
+- [Order in bulk the total number of requested robot parts](https://github.com/robocorp/example-orders-distribution)
